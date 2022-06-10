@@ -1,0 +1,41 @@
+
+.Filters {
+
+    background-color: #fff;
+    padding: 15px;
+
+    margin: 20px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+
+
+    .filter-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .Filter {
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .clear-button {
+        border: none;
+        outline: none;
+
+        background: transparent;
+        cursor: pointer;
+
+
+        color: var(--dark-grayish-cyan);
+        font-weight: 600;
+        font-size: 14px;
+
+        &:hover {
+            text-decoration: underline;
+            color: var(--dark-cyan);
+        }
+    }
+}

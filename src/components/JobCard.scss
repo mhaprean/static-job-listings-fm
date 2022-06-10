@@ -1,0 +1,138 @@
+.JobCard {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 1px 2px 10px rgba(91, 164, 164, 0.2);
+
+  // box-shadow: inset 4px 0 0 var(--dark-cyan);
+  border-left: 5px solid var(--dark-cyan);
+
+  display: flex;
+  position: relative;
+
+  .image {
+    margin-right: 20px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  // mobile design adaptations (I started with desktop first for this one)
+  @media only screen and (max-width: 700px) {
+    margin-top: 40px;
+    .image {
+      position: absolute;
+      top: -25px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .header {
+      margin-top: 15px;
+    }
+
+    .position {
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    .job-info {
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--dark-grayish-cyan);
+      margin-bottom: 15px;
+    }
+
+
+  }
+
+  .content {
+    flex-grow: 1;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-size: 14px;
+      margin-right: 5px;
+      font-weight: 600;
+      color: var(--dark-cyan);
+    }
+
+    .label {
+      color: #fff;
+      padding: 0 8px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-left: 5px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .label-new {
+      background-color: var(--dark-cyan);
+    }
+    .label-featured {
+      background-color: #000;
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .position {
+      color: #000;
+      font-weight: 600;
+    }
+
+    .meta {
+      display: flex;
+
+      .meta-item {
+        color: var(--dark-grayish-cyan);
+        font-size: 14px;
+
+        &.dot {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .job-info {
+      flex-grow: 1;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tag {
+      color: var(--dark-cyan);
+      margin-right: 10px;
+      margin-bottom: 10px;
+      background-color: var(--light-grayish-cyan-tablets);
+      height: 25px;
+      line-height: 25px;
+      padding: 0 10px;
+      font-weight: 600;
+      font-size: 12px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: var(--dark-cyan);
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
